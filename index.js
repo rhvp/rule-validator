@@ -1,3 +1,4 @@
+require('dotenv').config();
 const app = require('./app');
 
 Error.stackTraceLimit = 3;
