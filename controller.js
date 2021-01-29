@@ -26,22 +26,22 @@ const validateConditionNested = (rule, data, dataField, nest1) => {
     }
 
     else if(rule.condition === 'eq') {
-        if(nest1 == rule.condition_value) return true;
+        if(fieldData == rule.condition_value) return true;
         return false;
     }
 
     else if(rule.condition === 'neq') {
-        if(nest1 != rule.condition_value) return true;
+        if(fieldData != rule.condition_value) return true;
         return false;
     }
 
     else if(rule.condition === 'gt') {
-        if(nest1 > rule.condition_value) return true;
+        if(fieldData > rule.condition_value) return true;
         return false;
     }
 
     else if(rule.condition === 'contains') {
-        if(nest1.includes(rule.condition_value)) return true;
+        if(fieldData.includes(rule.condition_value)) return true;
         return false;
     }
 
