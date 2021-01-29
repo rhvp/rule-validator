@@ -71,7 +71,7 @@ const filterRule = (rule, data) => {
 
 const validateCondition = (rule, data) => {
     let field = data[rule.field];
-    if(!data.includes(ruleField)) return 'field missing from data';
+    if(!data.includes(field)) return 'field missing from data';
     if(rule.condition === 'gte') {
         if(field >= rule.condition_value) return true;
         return false;
